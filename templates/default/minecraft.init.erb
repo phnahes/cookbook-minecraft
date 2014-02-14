@@ -4,7 +4,8 @@
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 DESC="Minecraft Server"
-NAME=minecraft_server.jar
+#NAME=minecraft_server.jar
+NAME=craftbukkit.jar
 PATHGAME="/data/minecraft/"
 SCREENNAME=minecraft-server # the session screen game given
 INITNAME=minecraft
@@ -12,14 +13,17 @@ INITNAME=minecraft
 DAEMON="/usr/bin/java"
 DAEMONUSER=root
 DAEMONGROUP=root
-XMS="32M"
+XMS="50M"
 XMX="304M"
 # the -Xincgc options enable incremental garbage collector which slows 
 # execution but makes  more memory efficient. 
 # -Xmx1024M is the recommended minimum
 
 #DAEMON_ARGS="-DmS $SCREENNAME java -Xincgc -Xms32M -Xmx304M -jar /usr/local/minecraft-server/$NAME nogui" 
-DAEMON_ARGS="-Xincgc -Xms$XMS -Xmx$XMX -jar $PATHGAME/$NAME nogui" 
+#DAEMON_ARGS="-XX:+UseFastAccessorMethods -XX:+AggressiveOpts  -XX:+DisableExplicitGC -XX:+UseAdaptiveGCBoundary -XX:MaxGCPauseMillis=500 -XX:SurvivorRatio=16 -XX:+UseParallelGC -XX:UseSSE=3 -XX:ParallelGCThreads=1 -Dsun.java3d.opengl=true -Xincgc -Xms$XMS -Xmx$XMX -jar $PATHGAME/$NAME nogui" 
+DAEMON_ARGS="-Xincgc -Xms$XMS -Xmx$XMX -XX:+UseFastAccessorMethods -XX:+AggressiveOpts -XX:+DisableExplicitGC -XX:+UseAdaptiveGCBoundary -XX:SurvivorRatio=16 -XX:UseSSE=3 -Dsun.java3d.opengl=true -jar $PATHGAME/$NAME nogui" 
+#DAEMON_ARGS="-Xincgc -Xms$XMS -Xmx$XMX -jar $PATHGAME/$NAME nogui" 
+
  # Lowest memory limit used was about 80M on fresh start.
  # For screen we use `-DmS` instead of -dmS since -D dosen't detach the screen so our pid 
  # file created by start-stop-deamon is correct. 

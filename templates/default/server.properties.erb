@@ -1,24 +1,40 @@
 #Minecraft server properties
 #<%= Time.now.strftime("%a %b %T %Z %Y") %>
-allow-nether=<%= node['minecraft']['allow-nether'] %>
-level-name=<%= node['minecraft']['level-name'] %>
-enable-query=<%= node['minecraft']['enable-query'] %>
+generator-settings=
 allow-flight=<%= node['minecraft']['allow-flight'] %>
-server-port=<%= node['minecraft']['server-port'] %>
-level-type=<%= node['minecraft']['level-type'] %>
+allow-nether=<%= node['minecraft']['allow-nether'] %>
+difficulty=<%= node['minecraft']['difficulty'] %>
+enable-query=<%= node['minecraft']['enable-query'] %>
 enable-rcon=<%= node['minecraft']['rcon'] %>
+gamemode=<%= node['minecraft']['gamemode'] %>
+generate-structures=<%= node['minecraft']['generate-structures'] %>
+level-name=<%= node['minecraft']['level-name'] %>
 level-seed=<%= node['minecraft']['level-seed'] %>
-server-ip=<%= node['minecraft']['server-ip'] %>
+level-type=<%= node['minecraft']['level-type'] %>
 max-build-height=<%= node['minecraft']['max-build-height'] %>
-spawn-npcs=<%= node['minecraft']['spawn-npcs'] %>
-white-list=<%= node['minecraft']['white-list'] %>
-spawn-animals=<%= node['minecraft']['spawn-animals'] %>
+max-players=<%= node['minecraft']['max-players'] %>
+motd=<%= node['minecraft']['motd'] %>
 online-mode=<%= node['minecraft']['online-mode'] %>
 pvp=<%= node['minecraft']['pvp'] %>
-difficulty=<%= node['minecraft']['difficulty'] %>
-gamemode=<%= node['minecraft']['gamemode'] %>
-max-players=<%= node['minecraft']['max-players'] %>
+server-ip=<%= node['minecraft']['server-ip'] %>
+server-port=<%= node['minecraft']['server-port'] %>
+spawn-animals=<%= node['minecraft']['spawn-animals'] %>
 spawn-monsters=<%= node['minecraft']['spawn-monsters'] %>
-generate-structures=<%= node['minecraft']['generate-structures'] %>
+spawn-npcs=<%= node['minecraft']['spawn-npcs'] %>
 view-distance=<%= node['minecraft']['view-distance'] %>
-motd=<%= node['minecraft']['motd'] %>
+white-list=<%= node['minecraft']['white-list'] %>
+debug=<%= node['minecraft']['debug'] %>
+enable-rcon=<%= node['minecraft']['enable-rcon'] %>
+force-gamemode=<%= node['minecraft']['force-gamemode'] %>
+grow-trees=<%= node['minecraft']['grow-trees'] %>
+hardcore=<%= node['minecraft']['hardcore'] %>
+minecraft=server properties
+player-idle-timeout=<%= node['minecraft']['player-idle-timeout'] %>
+query.port=<%= node['minecraft']['query.port'] %>
+rcon.password=<%= node['minecraft']['rcon.password'] %>
+rcon.port=<%= node['minecraft']['rcon.port'] %>
+server-name=<%= node['minecraft']['server-name'] %>
+snooper-enabled=<%= node['minecraft']['snooper-enabled'] %>
+spawn-protection=<%= node['minecraft']['spawn-protection'] %>
+texture-pack=
+verify-names=<%= node['minecraft']['verify-names'] %>
